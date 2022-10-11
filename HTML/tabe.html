@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tag</title>
+    <style>
+        table {
+            width: 200px;
+            border-collapse: collapse;
+        }
+
+        table tr:nth-child(1)>td{
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <table border>
+        <tr>
+            <td colspan="2">a</td>
+            <td>a</td>
+        </tr>
+        <tr>
+            <td rowspan="2">b</td>
+            <td>b</td>
+            <td>b</td>
+        </tr>
+        <tr>
+            <td>c</td>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>d</td>
+            <td>d</td>
+        </tr>
+        <tr>
+            <td>e</td>
+            <td>e</td>
+            <td>e</td>
+        </tr>
+    </table>
+
+    <!-- 테이블 태그는 선이 없는 것이 디폴트 값이다.
+    따라서  border 속성을 적용해야 한다.
+    선은 이중선이 디폴트 값이다.
+    따라서 border-collapse 값을 collapse 로 적용해야 실선이 된다.
+    스타일 적용시 table 태그의 자식으로 tbody가 자동 삽임되므로 직계자식 선택자를 사용하지 않는다. -->
+</body>
+</html>
