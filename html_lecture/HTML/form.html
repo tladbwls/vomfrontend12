@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tag</title>
+    <style>
+        label {
+            color: green;
+        }
+        .title-input {
+            width: 50%;
+        }
+        textarea {
+            width: 50%;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <input type="text" name="userid" value="" placeholder="아이디입력"><br>
+        <input type="password" name="pw" placeholder="비밀번호 입력"><br>
+        <input type="submit">
+        <!-- type은 입력창의 기능을 정의한다. 
+        name은 서버에서 받을 수 있는 변수로 사용된다.
+        value는 초깃값-->
+    </form>
+    <!-- action 속성은 서버사이드 어떤 파일로 연결될 지를 나타내는 경로
+    method는 get 과 post가 있으며, get은 조회 등 보안이 상대적으로 중요하지 않을 대, post는 입력 등 보안이 중요한 데이터를 전달할 때 사용한다. -->
+
+    <!-- 다양한 input  -->
+
+<form action="#" method="get">
+    <input type="tel"><br>
+    <input type="number"><br>
+    <input type="file"><br>
+    <input type="button" value="View All"><br>
+    <input type="color"><br>
+    <input type="range"><br>
+</form>
+<button>View All</button>
+<br><br><br><br><br>
+
+<!-- label 과 input  -->
+<label for="userid"> 아이디 </label>: <input type="text" id="userid"><br>
+<label for="userpw"> 비밀번호 </label>: <input type="password" id="userpw"> <br>
+
+<!-- textarea -->
+<form action="#">
+    제목: <input type="text" class="title-input"><br>
+    내용: <textarea name="" id=""></textarea>
+</form>
+
+<!-- select box -->
+<select name="city" id="city">
+    <optgroup label="서울">
+        <option value="마포구">마포구</option>
+        <option value="강남구" selected>강남구</option>
+        <!-- slected 시작을 강남구부터 -->
+    </optgroup>
+    <optgroup label="인천">
+        <option value="부평구">부평구</option>
+    </optgroup>
+</select>
+
+<!-- check box  와 radio 버튼 -->
+<input type="checkbox" id="hong" name="홍대" value="홍대">
+<label for="hong">홍대</label>
+<input type="checkbox" id="incheon" name="인천" value="인천">
+<label for="incheon">인천</label>
+<input type="checkbox" id="kang" name="강남" value="강남">
+<label for="kang">강남</label>
+
+<!-- checkbox는 radio 버튼과 다르게 중복 선택이 될 경우 사용 -->
+
+<br><br><br><br>
+
+<input type="radio" name="cell" id="samsung"><label for="samsung">삼성</label> <br>
+<input type="radio" name="cell" id="lg"><label for="lg">엘지</label> <br>
+<input type="radio" name="cell" id="sk"><label for="sk">에스케이</label> <br>
+
+    
+</body>
+</html>
