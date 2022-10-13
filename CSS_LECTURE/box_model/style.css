@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+/* 1. margin은 요소와 요소 사이의 간격을 정의한다.
+    하나의 값은 4개의면에 공통으로, 2개의 값은 위, 아래 순으로, 3개의 값은 위, 좌우, 아래 순으로, 4개의 값은 위, 우, 아래, 좌로 값이 적용된다. */
+
+/* 2. padding은 컨텐츠와 보더 사이의 간격을 정의한다. 요소에 포함된 영역이다.
+    하나의 값은 4개의면에 공통으로, 2개의 값은 위, 아래 순으로, 3개의 값은 위, 좌우, 아래 순으로, 4개의 값은 위, 우, 아래, 좌로 값이 적용된다. */
+
+/* 3. border는 박스의 선을 정의한다.
+    border-width는 상하좌우 4개의 값으로 구분된다.
+    border-style은 주로 solid가 사용되며 다양한 모양이 존재한다.
+    특히 주의할 점은 축약해서 써야할 때 border-style을 누락하면 안된다. */
+
+/* 4. box-sizing은 간격이 요소에 어떻게 영향을 미치는지를 정의한다.
+    content-box 요소를 그대로 두고 간격이 추가되어 box가 추가된 만큼 커진다. border-box는 box의 크기에 변화를 주지 않고 영역 안으로 추가된 간격이 적용되기 때문에 box 크기 변화를 주지 않는다. 일반적으로 border-box는 초기에 작성하는 기본값으로 활용되는 경우가 많다. */
+
+/* 5. background 속성은 박스의 배경을 정의한다.
+    background-color는 색상만 지정된다.
+    background-image는 경로를 지정한다 이때 background-repeat은 repeat이 디폴트 값이어서 no-repeat 값을 지정해야한다.
+    background-position의 첫 번째 값은 좌우, 두 번째 값은 위아래로 위치는 지정한다.
+    background-size 는 사진과 박스의 비율이 다를 경우 사진을 어떻게 채울지 지정한다. contain의 경우 사진은 다 나오되 나머지는 비워둔다. 이에 반해 cover 의 경우 사진이 박스에 가득 차지만 비율로 인해 사진의 일부가 잘리게 된다. */
+
+
+div:nth-child(1) {
+    background: yellow;
+    border: 1px solid;
+    padding: 10px 20px 30px 40px;
+    _margin: 10px 20px 30px 40px;
+}
+
+div:nth-child(2) {
+    background: red;
+}
+
+div.border {
+    _margin: 100px auto;
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    /* 
+    border-width : 1px;
+    border-style : solid;
+    border-color : red; */
+}
+
+div.content {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+div.image {
+    width: 800px;
+    height: 800px;
+    border: 1px solid #888;
+    margin-top: 200px;
+    /* background-image: url(../box_model/w6.jpg);
+    background-repeat: no-repeat;
+    background-position: right center; */
+    background: url(../box_model/w6.jpg) no-repeat left top;
+    background-size: contain;
+}
+
+/* backgroud-repeat은 디폴트값이다. */
