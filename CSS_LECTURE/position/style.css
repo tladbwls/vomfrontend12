@@ -1,0 +1,88 @@
+
+
+/* 
+1.. static
+-모든 박스 요가 만들어지면 기본적으로 가는 디폴트 position 속성이다.
+-만들어진 위치가 정위치이고 left, top과 같은 위치이동 속성 적용이 안된다.
+2.relative
+- 만들어진 위치가 정위치이나 left, top 등을 사용해서 위치이동을 할 수 있다.
+- 위치 이동시 기준점(왼쪽, 위 꼭지점)은 처음 만들어진 위치이다.
+3.absolute
+-독립적으로 거의 사용하지 않고 어떤 요소의 자식으로 있을 때 주로 사용된다.
+-특징은 static(부모가 없는 것처럼 행동)이 아닌 부모를 기준으로 그 부모 내부를 기준으로 위치이동이 가능하다. (단 마이너스 값을 적용할 결루 부모의 반경을 넘을 수는 있다.)
+4.fixed 
+-만들어지는 위치는 static과 동일하지만 위치 이동 시 기준점은 부모를 무시하고 브라우저를 기준으로 한다.
+*/
+
+*{margin: 0;padding: 0;}
+
+body {height: 2000px;}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #888;
+}
+
+div.static {
+    background: yellow;
+    left: 100px; /*움직이지 않음!*/
+}
+
+div.relative {
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+    background: blue;
+    /* 위치이동의 기준은 왼쪽 위 꼭짓점 */
+    /* 될 수 있으면 위치 이동을 하지 않는 게 좋음 */
+    /* 레이아웃 단위에서 사용되는 요소는 static 이 가장 안정적이므로 가급적 static을 사용하되,  해당 욧의 자식이 미세하게 위치조정이 필요할 경우 relative를 사용하고, 자식에게 absolute 를 사용한다. */
+}
+
+div.wrap {
+    position: relative;
+    background: green;
+    width: 200px;
+}
+
+p.absolute {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    _right: 0;
+    _left: 50%;
+    _margin: 0 -40px 0 -40px;
+    border: 1px solid #888;
+    background: red;
+    z-index: 1;
+    /* z-index 값은 상대값이다. 내가 하려고 했던 것보다 높기만 하면 됨, 주로 absolute에 많이 쓴다. 주로 디버깅할 때 많이 사용 */
+    /* absolute를 적용할 경우 부모의 포지션이 static이 아니면 부모의 내부에서 움직인다.
+    요소를 중앙으로 보내려 할 때는 left를 50%로 옮기고, 요소크기의 반만큼 margin-left로 밀어준다. */
+}
+
+p.another {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+
+div.fixed {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: aquamarine;
+}
+
+div.fixed-ex {
+    position: absolute;
+    right: 0;
+    background: maroon;
+    /* absolute요소가 body를 부모로 잡을 경우 fixed와 마찬가지로 브라우저를 기준으로 위치이동을 한다.
+    하지만 fixed와 다른 점은 스크롤을 했을 때 fixed는 항상 위치를 잡고 있지만, absolute는 스크롤에 영향 없이 위치를 잡는다. */
+}
+

@@ -67,4 +67,24 @@ div.image {
     background-size: contain;
 }
 
+.radius {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    margin: 100px auto;
+    border-radius: 105px;
+    /* border-radius 를 50%로 주면 원이 된다. */
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100&1+0,0+100;Blue+to+Transparent */
+    background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+
+}
+
+body {
+    height: 4000px;
+}
+
 /* backgroud-repeat은 디폴트값이다. */
