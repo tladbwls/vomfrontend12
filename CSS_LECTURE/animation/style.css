@@ -1,5 +1,10 @@
 /* 
--animation
+1. animation-name: 애니메이션 keyframes와 연결할 이름
+2. animation-delay : 애니메이션 실행을 특정 시간동안 지연시켜준다.
+3. animation-fill-model : 애니메이션 실행 후 속성이 지속되게 한다. (forwords 적용 시)
+4. animation -interation-count : 애니메이션 실행횟수 지정
+5. aniation-direction : 애니메이션 변화 후 변화 이전으로 자동 계산하여 실행(alternate 적용 시)
+6. animation-duration : 애니메이션 지속 시간 지정   
 */
 
 *  {
@@ -32,7 +37,7 @@ div.inner {
     animation: change-element 1s 3 cubic-bezier(0.175, 0.885, 0.32, 1.275)   alternate forwards;
 }
 
-@keyframes change-element {
+/* @keyframes change-element {
     0%{
         width: 200px;
         height: 200px;
@@ -43,7 +48,7 @@ div.inner {
         height: 400px;
         background: red;
     }
-}
+} */
 
 div.ham {
     width: 100px;
@@ -57,23 +62,20 @@ div.ham {
 i.fa-solid {
     font-size: 30px;
     color: white;
-    opacity: 0.6;
+    _opacity: 0.6;
     /* opacity는 투명도이며, 값이 0에 가까울수록 투명도는 높아진다. */
-    animation: scale 0.5s infinite alternate ;
+    animation: scale 1s infinite alternate ;
 }
 
-@keyframe scale {
+@keyframes scale {
     0%{
-        width: 100px;
-        height: 100px;
-        background-color: #555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 30px;
+        color: white;
+        opacity: 0.6;
     }
     100% {
-        width : 200px;
-        height:200px;
+        font-size: 50px;
+        opacity: 1;
     }
             
 }

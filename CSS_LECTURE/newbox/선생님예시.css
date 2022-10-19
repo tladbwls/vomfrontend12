@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+    height: auto;
+}
+.container {
+    width: 100%;
+    max-width: 1024px;
+    background:black;
+    display: flex;
+}
+
+.item {
+    width: 33.33%;
+    height: 200%;
+    border: 1px solid #fff;
+}

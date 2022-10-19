@@ -1,0 +1,38 @@
+/* 
+    - 플렉스 박스는 1차원의 요소의 레이아웃을 설게할 수 있는 스타일 속성이다.
+    - 플렉스는 컨테이너와 아이템의 관계로 레이아웃을 만든다. 이때 컨테이너에 지정된 속성이 아이템의 레이아웃을 변경한다.
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 400px;
+    background-color: #999;
+    display: flex; /*flex-direction은  row가 기본으로 적용된다.*/
+    flex-direction: row;
+    /* row, row-reverse, column, column-reverse */
+    flex-wrap: wrap;
+    /* nowrap, wrap, wrap-reverse */
+    justify-content: space-around;
+    /* flex-start, flex-end, space-between, space-around, space-evenly */
+    align-items: center;
+    /* flex-start, flex-end, center, baseline, stretch */
+}
+
+.container > .item{
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid;
+    background: #ff5252;
+}
+
+.container > .item:nth-child(2n) /*2n으로 하면 짝수 2n+1로 하면 홀수*/ {
+    background: #bf5e5e;
+
+}

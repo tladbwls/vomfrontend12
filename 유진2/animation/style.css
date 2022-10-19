@@ -1,0 +1,17 @@
+
+
+div {width:50px;height: 50px;}
+div:hover {animation: change 1s  alternate-reverse ease;}
+div:before, div:after {position: absolute;left: 15px;content:' ';height: 40px;width: 2px;background-color: #000;}
+div:before {transform: rotate(45deg);}
+div:after {transform: rotate(-45deg);}
+
+@keyframes change {
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+    
+}
