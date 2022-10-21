@@ -2,9 +2,482 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 
 /* reset */
-* { margin:0;  padding:0;}
-ol,ul { list-style: none; }
-a { outline:0; text-decoration:none; color:#555; }
-img { border:0;}
-body { font:12px/1.6 'Poiret One'; color:#555; } 
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  outline: 0;
+  text-decoration: none;
+  color: #555;
+}
+img {
+  border: 0;
+}
+body {
+  font: 12px/1.6 "Poiret One";
+  color: #555;
+}
 
+.clear::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* ==============================header style============================ */
+
+header {
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  background: #888;
+  top: 0;
+  left: 0;
+  /* transition: all 0.5s ease; */
+}
+
+/* ==============================nav style============================ */
+
+nav {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  margin-left: 15%;
+  background: #212121;
+  /* transition: all 0.5s ease; */
+}
+
+/* ==============================section style============================ */
+
+section {
+  width: 85%;
+  position: relative;
+  margin-left: 15%;
+  background: #ddd;
+}
+
+/* ==============================article box style============================ */
+
+article {
+  width: 20%;
+  height: 260px;
+  float: left;
+  transition: all 0.5s ease;
+  animation: scale 1s 1;
+}
+
+@keyframes scale {
+  0% {transform: scale(0);}
+  100%{transform: scale(1);}
+}
+
+article:nth-child(1) {
+  background: #aaa;
+  width: 60%;
+  height: 520px;
+}
+article:nth-child(2) {
+  background: #bbb;
+  width: 40%;
+}
+article:nth-child(3) {
+  background: #ccc;
+}
+article:nth-child(4) {
+  background: #ddd;
+}
+article:nth-child(5) {
+  background: #eee;
+}
+article:nth-child(6) {
+  background: #999;
+  width: 40%;
+}
+article:nth-child(7) {
+  background: #888;
+}
+article:nth-child(8) {
+  background: #777;
+}
+article:nth-child(9) {
+  background: #666;
+  width: 40%;
+}
+article:nth-child(10) {
+  background: #555;
+}
+article:nth-child(11) {
+  background: #444;
+}
+article:nth-child(12) {
+  background: #333;
+}
+/* article:nth-child(13) {
+  background: #222;
+}
+article:nth-child(14) {
+  background: #111;
+}
+article:nth-child(15) {
+  background: #aaa;
+}
+article:nth-child(16) {
+  background: #bbb;
+}
+article:nth-child(17) {
+  background: #ccc;
+}
+article:nth-child(18) {
+  background: #ddd;
+}
+article:nth-child(19) {
+  background: #eee;
+}
+article:nth-child(20) {
+  background: #999;
+} */
+
+
+/* ========================screen size 1280px  ~ 1599px====================== */
+@media screen and (min-width:1280px) and (max-width:1599px) {
+  /* ========================header style==================== */
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* ========================screen size 1024px  ~ 1279px====================== */
+
+@media screen and (min-width:1024px) and (max-width:1279px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+/* =====================article box style================== */
+  article {
+    width: 25%;
+  }
+
+  article:nth-child(1) {
+    background: #aaa;
+    width: 75%;
+    height: 520px;
+  }
+  article:nth-child(2) {
+    background: #bbb;
+    width: 25%;
+  }
+  article:nth-child(3) {
+    background: #ccc;
+  }
+  article:nth-child(4) {
+    background: #ddd;
+  }
+  article:nth-child(5) {
+    background: #eee;
+  }
+  article:nth-child(6) {
+    background: #999;
+    width: 50%;
+  }
+  article:nth-child(7) {
+    background: #888;
+    width: 50%;
+  }
+  article:nth-child(8) {
+    background: #777;
+  }
+  article:nth-child(9) {
+    background: #666;
+    width: 25%;
+  }
+  article:nth-child(10) {
+    background: #555;
+    width: 50%;
+  }
+  article:nth-child(11) {
+    background: #444;
+  }
+  article:nth-child(12) {
+    background: #333;
+  }
+}
+
+/* ========================screen size 780px  ~ 1023px====================== */
+@media screen and (min-width:780px) and (max-width:1023px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* =====================article box style================== */
+  article {
+    width: 33.33%;
+  }
+
+  article:nth-child(1) {
+    background: #aaa;
+    width: 100%;
+    height: 400x;
+  }
+  article:nth-child(2) {
+    background: #bbb;
+    width: 66.66%;
+  }
+  article:nth-child(3) {
+    background: #ccc;
+  }
+  article:nth-child(4) {
+    background: #ddd;
+    display: none;
+  }
+  article:nth-child(5) {
+    background: #eee;
+  }
+  article:nth-child(6) {
+    background: #999;
+    width: 66.66%;
+  }
+  article:nth-child(7) {
+    background: #888;
+    display: none;
+  }
+  article:nth-child(8) {
+    background: #777;
+    width: 33.33%;
+  }
+  article:nth-child(9) {
+    background: #666;
+    width: 33.33%;
+  }
+  article:nth-child(10) {
+    background: #555;
+    display: none;
+  }
+  article:nth-child(11) {
+    background: #444;
+  }
+  article:nth-child(12) {
+    background: #333;
+    display: none;
+  }
+}
+
+/* ========================screen size 640px  ~ 779px====================== */
+@media screen and (min-width:640px) and (max-width:779px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* =====================article box style================== */
+  article {
+    width: 50%;
+  }
+
+  article:nth-child(1) {
+    background: #aaa;
+    width: 100%;
+    height: 400px;
+  }
+  article:nth-child(2) {
+    background: #bbb;
+    width: 100%;
+  }
+  article:nth-child(3) {
+    background: #ccc;
+    display: none;
+  }
+  article:nth-child(4) {
+    background: #ddd;
+    display: none;
+  }
+  article:nth-child(5) {
+    background: #eee;
+  }
+  article:nth-child(6) {
+    background: #999;
+    width: 50%;
+  }
+  article:nth-child(7) {
+    background: #888;
+    display: none;
+  }
+  article:nth-child(8) {
+    background: #777;
+    width: 50%;
+  }
+  article:nth-child(9) {
+    background: #666;
+    width: 50%;
+  }
+  article:nth-child(10) {
+    background: #555;
+    display: none;
+  }
+  article:nth-child(11) {
+    background: #444;
+    width: 50%;
+  }
+  article:nth-child(12) {
+    background: #333;
+    width: 50%;
+  }
+}
+
+
+/* ========================screen size 480px  ~ 639px====================== */
+@media screen and (min-width:480px) and (max-width:639px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 130px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* =====================article box style================== */
+  article {
+    width: 50%;
+    height: 150px;
+  }
+
+  article:nth-child(1) {
+    background: #aaa;
+    width: 100%;
+    height: 300px;
+  }
+  article:nth-child(2) {
+    background: #bbb;
+    width: 100%;
+  }
+  article:nth-child(3) {
+    background: #ccc;
+    display: none;
+  }
+  article:nth-child(4) {
+    background: #ddd;
+    display: none;
+  }
+  article:nth-child(5) {
+    background: #eee;
+  }
+  article:nth-child(6) {
+    background: #999;
+    width: 50%;
+  }
+  article:nth-child(7) {
+    background: #888;
+    display: none;
+  }
+  article:nth-child(8) {
+    background: #777;
+    width: 50%;
+  }
+  article:nth-child(9) {
+    background: #666;
+    width: 50%;
+  }
+  article:nth-child(10) {
+    background: #555;
+    display: none;
+  }
+  article:nth-child(11) {
+    background: #444;
+    width: 50%;
+  }
+  article:nth-child(12) {
+    background: #333;
+    display: 50%;
+  }
+}
+
+/* ========================screen size 479px====================== */
+@media screen and (max-width:479px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+  }
+  
+  nav {
+    display: none;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  article{
+    display: none;
+  }
+
+  article:nth-child(1) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+
+}
