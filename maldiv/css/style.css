@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ol,
 ul {
@@ -18,7 +19,7 @@ a {
 img {
   border: 0;
 }
-body {
+html, body {
   font: 12px/1.6 "Poiret One";
   color: #555;
 }
@@ -35,11 +36,67 @@ header {
   position: fixed;
   width: 15%;
   height: 100%;
-  background: #888;
+  background: #fff;
   top: 0;
   left: 0;
   /* transition: all 0.5s ease; */
 }
+/* ==============================Logo style============================ */
+
+header h1 {
+  width: 180px;
+  height: 136px;
+  background: url(../img/logo1.png) no-repeat  0 0;
+  background-size: contain;
+  /* background-repeat: no-repeat;
+  background-position: 0 0; */
+  text-indent: -9999px;
+  /* text-indent: 들여쓰기 => 음수 값이면 화면 좌측, 양수 값이면 화면 우측으로 들여쓴다.; */
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -90px; /*중앙으로 오게 하기 위해 로고의 크기만큼 왼쪽으로*/
+  
+}
+
+#gnb {
+  position: absolute;
+  top: 300px;
+  right: 57px; 
+}
+
+#gnb a {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  color: #555;
+  line-height: 1.8;
+  padding: 8px 30px;
+  transition: all 0.5s ease;
+}
+
+#gnb a:hover {
+  color: skyblue;
+}
+
+#gnb a i {
+  margin-right: 13px;
+}
+
+.snsSet {
+  position: absolute;
+  bottom: 50px;
+  width: 90px;
+  height: 47px;
+  right: 50%;
+  margin-right: -45px;
+}
+
+.snsSet a {
+  float: left;
+}
+
+
 
 /* ==============================nav style============================ */
 
@@ -50,6 +107,15 @@ nav {
   margin-left: 15%;
   background: #212121;
   /* transition: all 0.5s ease; */
+  display: flex;
+  justify-content: space-between;
+  padding:0 10 ;
+}
+
+nav > div {
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
 }
 
 /* ==============================section style============================ */
@@ -143,13 +209,36 @@ article:nth-child(20) {
 } */
 
 
-/* ========================screen size 1280px  ~ 1599px====================== */
-@media screen and (min-width:1280px) and (max-width:1599px) {
+/* ========================common header 0px  ~ 1599px====================== */
+@media screen and (max-width:1599px) {
   /* ========================header style==================== */
   header {
     position: relative;
     width: 100%;
     height: 80px;
+  }
+
+  header h1 {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    top: 20px;
+    margin-left: 0;
+  }
+
+  #gnb {
+    top: 20px;
+    right: 200px;
+  }
+
+  #gnb li {
+    float: left;
+  }
+
+  .snsSet {
+    right: 80px;
+    bottom: 20px;
   }
 
   nav {
@@ -166,11 +255,23 @@ article:nth-child(20) {
 /* ========================screen size 1024px  ~ 1279px====================== */
 
 @media screen and (min-width:1024px) and (max-width:1279px) {
-  header {
+ 
+ #gnb {
+  right: 30px;
+ }
+
+  .snsSet {
+    display: none;
+  }
+ 
+ 
+  /* header {
     position: relative;
     width: 100%;
     height: 80px;
   }
+
+  
 
   nav {
     width: 100%;
@@ -180,7 +281,7 @@ article:nth-child(20) {
   section {
     width: 100%;
     margin-left: 0;
-  }
+  } */
 
 /* =====================article box style================== */
   article {
@@ -194,7 +295,7 @@ article:nth-child(20) {
   }
   article:nth-child(2) {
     background: #bbb;
-    width: 25%;
+    width: 25%; 
   }
   article:nth-child(3) {
     background: #ccc;
@@ -234,7 +335,21 @@ article:nth-child(20) {
 
 /* ========================screen size 780px  ~ 1023px====================== */
 @media screen and (min-width:780px) and (max-width:1023px) {
-  header {
+
+  #gnb {
+    right: 10px;
+  }
+
+  #gnb a {
+    padding: 10px;
+  }
+
+  .snsSet {
+    display: none;
+  }
+
+
+  /* header {
     position: relative;
     width: 100%;
     height: 80px;
@@ -248,7 +363,7 @@ article:nth-child(20) {
   section {
     width: 100%;
     margin-left: 0;
-  }
+  } */
 
   /* =====================article box style================== */
   article {
@@ -305,7 +420,20 @@ article:nth-child(20) {
 
 /* ========================screen size 640px  ~ 779px====================== */
 @media screen and (min-width:640px) and (max-width:779px) {
-  header {
+
+  #gnb {
+    right: 10px;
+  }
+
+  #gnb a {
+    padding: 10px;
+  }
+
+  .snsSet {
+    display: none;
+  }
+
+  /* header {
     position: relative;
     width: 100%;
     height: 80px;
@@ -319,7 +447,7 @@ article:nth-child(20) {
   section {
     width: 100%;
     margin-left: 0;
-  }
+  } */
 
   /* =====================article box style================== */
   article {
@@ -379,10 +507,43 @@ article:nth-child(20) {
 
 /* ========================screen size 480px  ~ 639px====================== */
 @media screen and (min-width:480px) and (max-width:639px) {
+
+
+
+  .snsSet {
+    display: none;
+  }
+
   header {
     position: relative;
     width: 100%;
     height: 130px;
+  }
+
+  header h1 {
+    position: relative;
+    top: 20px;
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    left: 0;
+  }
+
+  #gnb {
+    position: relative;
+    height:65px;
+    left: 0;
+    padding: 10px  0 0 0;
+  }
+
+  #gnb li {
+    float: left;
+    width: 25%;
+  }
+
+  #gnb a {
+    padding: 5px;
+    text-align: center;
   }
 
   nav {
@@ -458,7 +619,53 @@ article:nth-child(20) {
     height: 40px;
     z-index: 2;
   }
+
+  header h1 {
+    width: 140px;
+    top: 20px;
+    left: 50%;
+    margin-left: -70px;
+    background-image: url(../img/logo1.png);
+    height: 136px;
+    background-size: contain;
+  }
+
+  #gnb {
+    width: 250px;
+    top: 140px;
+    right: 50%;
+    margin-right: -125px;
+  }
   
+  #gnb li {
+    float: none;
+  }
+
+  #gnb a {
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    margin: 8px 0;
+    border-radius: 10px;
+    color: #fff; 
+    
+  }
+
+  #gnb a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  /* #gnb li {
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    border-radius: ;
+  } */
+
+  .snsSet {
+    display: none;
+  }
+
   nav {
     display: none;
   }
@@ -477,6 +684,7 @@ article:nth-child(20) {
     position: fixed;
     width: 100%;
     height: 100%;
+    background: #fff;
   }
 
 
